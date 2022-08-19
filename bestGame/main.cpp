@@ -2,9 +2,13 @@
 
 using namespace sf;
 
-RenderWindow window;
-CircleShape circle(70);
-RectangleShape rectangle(Vector2f(150, 50));
+RenderWindow    window;
+CircleShape     circle(70);
+RectangleShape  rectangle(Vector2f(150, 50));
+Image			image;
+Texture			texture;
+Sprite			sprite;
+
 int main()
 {
 	window.create(VideoMode(640, 480), "Game");
@@ -14,6 +18,8 @@ int main()
 
 	rectangle.setFillColor(Color::Blue);
 	rectangle.setPosition(100, 100);
+    
+	image.loadFromFile("image.png");
 
 	while (window.isOpen())
 	{
